@@ -1,0 +1,11 @@
+---
+
+- name: Deploy A Simple Webserver With Role
+  hosts: webservers
+  gather_facts: false
+  become: true
+  tags:
+    - install_webservers
+
+  roles:
+    - a_simple_webserver
