@@ -1,10 +1,9 @@
 ---
 
 - name: Copy in webpage
-  copy:
-    src: index.html
+  template:
+    src: "{{ a_simple_webserver_index_file }}"
     dest: "{{ a_simple_webserver_home }}"
   notify:
     - Reload_webserver
-
 ...
