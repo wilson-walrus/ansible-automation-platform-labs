@@ -1,6 +1,8 @@
 ---
 
 firewalld_active: false
+a_simple_webserver_firewalld_ports_state: enabled 
+a_simple_webserver_firewalld_service_state: started
 a_simple_webserver_ports:
   - 80
 

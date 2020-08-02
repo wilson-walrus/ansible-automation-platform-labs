@@ -5,14 +5,14 @@
     - name: Start & Enable firewalld
       service:
         name: firewalld
-        state: started
+        state: "{{ a_simple_webserver_firewalld_service_state | default(started) }}"
         enabled: true
 
     - name: Open up firewall port(s)
       firewalld:
         port: "{{ port }}/tcp"
         permanent: yes
-        state: enabled
+        state: "{{ a_simple_webserver_firewalld_ports_state | default(enabled) }}"
         immediate: true
       loop: "{{ a_simple_webserver_ports }}"  
       loop_control:
