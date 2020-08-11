@@ -1,0 +1,6 @@
+[webservers]
+webserver0 ansible_host=webserver0.example.com
+webserver1 ansible_host=webserver1.example.com
+
+[webservers:vars]
+GUID="{{ lookup('env', 'GUID') }}"
