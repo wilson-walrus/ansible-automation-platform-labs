@@ -8,7 +8,7 @@ a_simple_webserver_ports:
 
 a_simple_webserver_packages:
   - httpd
-  - mod_wsgi
+  - python3-mod_wsgi
 
 a_simple_webserver_index_file: index.html.j2
 a_simple_webserver_service: httpd
